@@ -19,6 +19,9 @@ class RepositoriesViewController: UICollectionViewController {
     }
     
     private func setup() {
+        guard let url = URL(string: AppUrlConstants.reposUrl) else { return }
+        WebService().getRepositories(url: url) { (_) in
+        }
     }
     
 }
