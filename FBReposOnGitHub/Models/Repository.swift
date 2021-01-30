@@ -9,7 +9,7 @@
 import Foundation
 
 // MARK: - Repositoriy
-struct Repositoriy: Decodable {
+struct Repository: Decodable {
     let name: String
     let description: String
     let forks: Int

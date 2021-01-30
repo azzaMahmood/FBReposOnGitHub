@@ -17,20 +17,129 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="yap-fr-D4g">
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Q0n-xW-1ca">
                             <size key="itemSize" width="128" height="128"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="caz-TK-7gd">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="RepositoryCollectionViewCell" id="caz-TK-7gd" customClass="RepositoryCollectionViewCell" customModule="FBReposOnGitHub" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="c5Z-HD-mlb">
                                     <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tZc-tQ-GQM">
+                                            <rect key="frame" x="3" y="3" width="122" height="122"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K6i-u0-SPp">
+                                                    <rect key="frame" x="-89" y="8" width="300" height="38"/>
+                                                    <color key="backgroundColor" red="0.39323180313959444" green="0.94764025186754997" blue="0.73153144968649775" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="300" id="aa8-zH-VID"/>
+                                                        <constraint firstAttribute="height" constant="38" id="mWa-SR-Bpx"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="18"/>
+                                                    <color key="textColor" red="0.35352252369999998" green="0.18724043709999999" blue="0.61569198140000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                            <real key="value" value="10"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fHl-Ud-3Cq">
+                                                    <rect key="frame" x="8" y="66" width="106" height="649.5"/>
+                                                    <string key="text">The JSON Formatter was created to help folks with debugging. As JSON data is often output without line breaks to save space, it can be extremely difficult to actually read and make sense of it. This tool hoped to solve the problem by formatting and beautifying the JSON data so that it is easy to read and debug by human beings.</string>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.35352252369999998" green="0.18724043709999999" blue="0.61569198140000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="2JB-cS-4a9">
+                                                    <rect key="frame" x="16" y="743" width="90.5" height="35"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Forks :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N12-Dy-azi">
+                                                            <rect key="frame" x="0.0" y="7.5" width="55" height="20.5"/>
+                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                            <color key="textColor" red="0.35352252369999998" green="0.18724043709999999" blue="0.61569198140000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="555" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3gD-ek-1YX">
+                                                            <rect key="frame" x="60" y="7.5" width="30.5" height="20.5"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <color key="textColor" red="0.35352252369999998" green="0.18724043709999999" blue="0.61569198140000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="35" id="AP3-G7-89x"/>
+                                                    </constraints>
+                                                </stackView>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BEg-Fg-YKz">
+                                                    <rect key="frame" x="-4" y="788" width="130" height="30"/>
+                                                    <color key="backgroundColor" red="0.40000000000000002" green="0.72549019607843135" blue="0.97254901960784312" alpha="0.23118124202806123" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="130" id="NiC-fW-N3U"/>
+                                                        <constraint firstAttribute="height" constant="30" id="Vzr-vn-tAY"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                                    <state key="normal" title="Avatar's URL">
+                                                        <color key="titleColor" red="0.35352252369999998" green="0.18724043709999999" blue="0.61569198140000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    </state>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                            <real key="value" value="8"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                                            <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </button>
+                                            </subviews>
+                                            <color key="backgroundColor" red="0.75390634990084593" green="0.8218434160976974" blue="0.99292102302472618" alpha="0.22660536990311439" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <constraints>
+                                                <constraint firstItem="fHl-Ud-3Cq" firstAttribute="leading" secondItem="tZc-tQ-GQM" secondAttribute="leading" constant="8" id="6X5-4n-5Lo"/>
+                                                <constraint firstItem="K6i-u0-SPp" firstAttribute="top" secondItem="tZc-tQ-GQM" secondAttribute="top" constant="8" id="7Se-xh-X0q"/>
+                                                <constraint firstItem="fHl-Ud-3Cq" firstAttribute="top" secondItem="K6i-u0-SPp" secondAttribute="bottom" constant="20" id="PWw-Gm-bb9"/>
+                                                <constraint firstItem="2JB-cS-4a9" firstAttribute="centerX" secondItem="tZc-tQ-GQM" secondAttribute="centerX" id="SfM-9f-S6S"/>
+                                                <constraint firstItem="BEg-Fg-YKz" firstAttribute="centerX" secondItem="tZc-tQ-GQM" secondAttribute="centerX" id="cJe-F3-OMx"/>
+                                                <constraint firstItem="K6i-u0-SPp" firstAttribute="centerX" secondItem="tZc-tQ-GQM" secondAttribute="centerX" id="nOh-pM-7id"/>
+                                                <constraint firstItem="BEg-Fg-YKz" firstAttribute="top" secondItem="2JB-cS-4a9" secondAttribute="bottom" constant="10" id="o3N-SC-vHZ"/>
+                                                <constraint firstItem="2JB-cS-4a9" firstAttribute="top" secondItem="fHl-Ud-3Cq" secondAttribute="bottom" constant="27.5" id="qrl-hh-Dqt"/>
+                                                <constraint firstAttribute="trailing" secondItem="fHl-Ud-3Cq" secondAttribute="trailing" constant="8" id="zCi-Tl-Yuq"/>
+                                            </constraints>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                                    <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                    <real key="value" value="8"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                    <color key="value" red="0.78430449026793447" green="0.65170207881100606" blue="0.99292102302472618" alpha="0.5731228159928784" colorSpace="custom" customColorSpace="displayP3"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                    <real key="value" value="1"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </view>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="tZc-tQ-GQM" firstAttribute="top" secondItem="c5Z-HD-mlb" secondAttribute="top" constant="3" id="6Qa-7i-czf"/>
+                                        <constraint firstItem="tZc-tQ-GQM" firstAttribute="leading" secondItem="c5Z-HD-mlb" secondAttribute="leading" constant="3" id="FxY-id-hKC"/>
+                                        <constraint firstAttribute="trailing" secondItem="tZc-tQ-GQM" secondAttribute="trailing" constant="3" id="MmX-rS-VV5"/>
+                                        <constraint firstAttribute="bottom" secondItem="tZc-tQ-GQM" secondAttribute="bottom" constant="3" id="RrF-5k-7A8"/>
+                                    </constraints>
                                 </collectionViewCellContentView>
+                                <connections>
+                                    <outlet property="avatarUrlButton" destination="BEg-Fg-YKz" id="JR0-Li-ZX2"/>
+                                    <outlet property="containerView" destination="tZc-tQ-GQM" id="Kfl-50-OL0"/>
+                                    <outlet property="descriptionLabel" destination="fHl-Ud-3Cq" id="9ME-G2-jCL"/>
+                                    <outlet property="nameLabel" destination="K6i-u0-SPp" id="KGZ-3Y-rlK"/>
+                                    <outlet property="noOfForksLabel" destination="3gD-ek-1YX" id="Jhw-mQ-UcB"/>
+                                </connections>
                             </collectionViewCell>
                         </cells>
                         <connections>

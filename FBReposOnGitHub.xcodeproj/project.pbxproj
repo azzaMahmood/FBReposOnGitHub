@@ -8,19 +8,23 @@
 
 /* Begin PBXBuildFile section */
 		4789209725C47D7F00C34746 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4789209625C47D7F00C34746 /* Constants.swift */; };
+		478920A325C4BFD900C34746 /* RepositoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478920A225C4BFD900C34746 /* RepositoryCollectionViewCell.swift */; };
+		478920A725C4ED0600C34746 /* Extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478920A625C4ED0600C34746 /* Extentions.swift */; };
 		47921C4D25C3735700361714 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47921C4C25C3735700361714 /* AppDelegate.swift */; };
 		47921C4F25C3735700361714 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47921C4E25C3735700361714 /* SceneDelegate.swift */; };
 		47921C5425C3735700361714 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47921C5225C3735700361714 /* Main.storyboard */; };
 		47921C5625C3735800361714 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 47921C5525C3735800361714 /* Assets.xcassets */; };
 		47921C5925C3735800361714 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47921C5725C3735800361714 /* LaunchScreen.storyboard */; };
 		47921C6625C37D3D00361714 /* RepositoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47921C6525C37D3D00361714 /* RepositoriesViewController.swift */; };
-		47921C6B25C3ACF400361714 /* Repositoriy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47921C6A25C3ACF400361714 /* Repositoriy.swift */; };
+		47921C6B25C3ACF400361714 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47921C6A25C3ACF400361714 /* Repository.swift */; };
 		47921C7025C3B34C00361714 /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47921C6F25C3B34C00361714 /* WebService.swift */; };
 		47921C7425C3D01C00361714 /* RepositoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47921C7325C3D01C00361714 /* RepositoryViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		4789209625C47D7F00C34746 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		478920A225C4BFD900C34746 /* RepositoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryCollectionViewCell.swift; sourceTree = "<group>"; };
+		478920A625C4ED0600C34746 /* Extentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extentions.swift; sourceTree = "<group>"; };
 		47921C4925C3735700361714 /* FBReposOnGitHub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FBReposOnGitHub.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		47921C4C25C3735700361714 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		47921C4E25C3735700361714 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -29,7 +33,7 @@
 		47921C5825C3735800361714 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		47921C5A25C3735800361714 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		47921C6525C37D3D00361714 /* RepositoriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesViewController.swift; sourceTree = "<group>"; };
-		47921C6A25C3ACF400361714 /* Repositoriy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repositoriy.swift; sourceTree = "<group>"; };
+		47921C6A25C3ACF400361714 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 		47921C6F25C3B34C00361714 /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
 		47921C7325C3D01C00361714 /* RepositoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -49,8 +53,17 @@
 			isa = PBXGroup;
 			children = (
 				4789209625C47D7F00C34746 /* Constants.swift */,
+				478920A625C4ED0600C34746 /* Extentions.swift */,
 			);
 			path = Helper;
+			sourceTree = "<group>";
+		};
+		478920A125C4BFAB00C34746 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				478920A225C4BFD900C34746 /* RepositoryCollectionViewCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		47921C4025C3735700361714 = {
@@ -72,6 +85,7 @@
 		47921C4B25C3735700361714 /* FBReposOnGitHub */ = {
 			isa = PBXGroup;
 			children = (
+				478920A125C4BFAB00C34746 /* Cells */,
 				4789209525C47D6600C34746 /* Helper */,
 				47921C7225C3CFF600361714 /* ViewModels */,
 				47921C6E25C3B33500361714 /* Services */,
@@ -98,7 +112,7 @@
 		47921C6925C3ACDC00361714 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				47921C6A25C3ACF400361714 /* Repositoriy.swift */,
+				47921C6A25C3ACF400361714 /* Repository.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -190,12 +204,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				47921C4D25C3735700361714 /* AppDelegate.swift in Sources */,
-				47921C6B25C3ACF400361714 /* Repositoriy.swift in Sources */,
+				47921C6B25C3ACF400361714 /* Repository.swift in Sources */,
 				47921C6625C37D3D00361714 /* RepositoriesViewController.swift in Sources */,
 				47921C7025C3B34C00361714 /* WebService.swift in Sources */,
+				478920A325C4BFD900C34746 /* RepositoryCollectionViewCell.swift in Sources */,
 				4789209725C47D7F00C34746 /* Constants.swift in Sources */,
 				47921C7425C3D01C00361714 /* RepositoryViewModel.swift in Sources */,
 				47921C4F25C3735700361714 /* SceneDelegate.swift in Sources */,
+				478920A725C4ED0600C34746 /* Extentions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

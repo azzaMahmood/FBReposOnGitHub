@@ -8,9 +8,13 @@
 import Foundation
 
 struct RepositoryCollectionViewModel {
-    let repositories: [Repositoriy]
+    let repositories: [Repository]
     
-    func numberOfCells() -> Int {
+    func numberOfSections() -> Int {
+        return 1
+    }
+    
+    func numberOfItems() -> Int {
         return repositories.count
     }
     
@@ -21,9 +25,9 @@ struct RepositoryCollectionViewModel {
 }
 
 struct RepositoryViewModel {
-    private let repository: Repositoriy
+    private let repository: Repository
     
-    init(_ repositories: Repositoriy) {
+    init(_ repositories: Repository) {
         self.repository = repositories
     }
     
@@ -41,5 +45,9 @@ struct RepositoryViewModel {
     
     var isForked: Bool {
         return repository.fork
+    }
+    
+    var avatarUrl: String {
+        return repository.owner.avatar_url
     }
 }
