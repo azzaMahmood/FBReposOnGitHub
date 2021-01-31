@@ -21,9 +21,6 @@ class RepositoriesViewController: UICollectionViewController, UICollectionViewDe
     
     private func setup() {
         guard let url = URL(string: AppUrlConstants.reposUrl) else { return }
-        DispatchQueue.global().sync {
-            
-            
             WebService().getRepositories(url: url) { [weak self] (repositories) in
                 guard let repositories = repositories else { return }
                 self?.repositoryCollectionVM = RepositoryCollectionViewModel(repositories: repositories)
@@ -32,7 +29,6 @@ class RepositoriesViewController: UICollectionViewController, UICollectionViewDe
                 }
             }
         }
-    }
     
     override func collectionView(_ collectionView: UICollectionView,
                                  willDisplay cell: UICollectionViewCell,
@@ -45,7 +41,6 @@ class RepositoriesViewController: UICollectionViewController, UICollectionViewDe
 
         func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize
         {
-            
             return CGSize(width: collectionView.frame.width - 30, height: 300)
         }
     
@@ -72,12 +67,11 @@ class RepositoriesViewController: UICollectionViewController, UICollectionViewDe
         cell.noOfForksLabel.text = repositoryVM.forksCount
         cell.avatarUrlButton.tag = indexPath.row
         cell.avatarUrlButton.addTarget(self, action: #selector(avatarButtonTapped(sender:)), for: .touchUpInside)
-       
         return cell
     }
     
     @objc func avatarButtonTapped(sender:UIButton!) {
         let repositoryVM = self.repositoryCollectionVM.repositoryAtIndex(sender.tag)
-
-        UIApplication.shared.open(URL(string: repositoryVM.avatarUrl)!)    }
+        UIApplication.shared.open(URL(string: repositoryVM.avatarUrl)!)
+    }
 }
